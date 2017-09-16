@@ -10,6 +10,15 @@ namespace LinqDemos
     {
         static void Main(string[] args)
         {
+            DistinctValueInString();
+        }
+
+        //Distinct values in test
+        static void DistinctValueInString()
+        {
+            string text = "angular,.net,SQL,angular";
+            text.Split(',').Distinct().ToList().ForEach(Console.WriteLine);
+            //Console.WriteLine(result);
         }
     }
 }
