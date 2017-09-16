@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinqDemos
 {
@@ -10,15 +7,24 @@ namespace LinqDemos
     {
         static void Main(string[] args)
         {
-            DistinctValueInString();
+            //DistinctValueInString();
+            Rewrite_ForEach_Loop();
         }
 
         //Distinct values in test
         static void DistinctValueInString()
         {
             string text = "angular,.net,SQL,angular";
-            text.Split(',').Distinct().ToList().ForEach(Console.WriteLine);
+            text.Split(',').Distinct().ToList().ForEach(p => Console.WriteLine(p));
+            //text.Split(',').Distinct().ToList().ForEach(Console.WriteLine);
             //Console.WriteLine(result);
+        }
+        //Rewrite foreach loop using linq
+        static void Rewrite_ForEach_Loop()
+        {
+            var uCase = new[] { "A", "B", "C", "D" };
+            var lCase = new[] { "a", "b", "c", "d" };
+            uCase.SelectMany(uc => lCase, (uc, lc) => (uc + lc)).ToList().ForEach(Console.WriteLine);
         }
     }
 }
