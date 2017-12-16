@@ -7,12 +7,14 @@ namespace LinqDemos
     {
         static void Main(string[] args)
         {
-            //DistinctValueInString();
-            Rewrite_ForEach_Loop();
+            //DistinctText();
+            //Rewrite_ForEach_Loop();
+            //SumTwoDimentionalArray();
+            TwoStringArraysWithDistinct();
         }
 
-        //Distinct values in test
-        static void DistinctValueInString()
+        //Find Distinct Text
+        static void DistinctText()
         {
             string text = "angular,.net,SQL,angular";
             text.Split(',').Distinct().ToList().ForEach(p => Console.WriteLine(p));
@@ -25,6 +27,25 @@ namespace LinqDemos
             var uCase = new[] { "A", "B", "C", "D" };
             var lCase = new[] { "a", "b", "c", "d" };
             uCase.SelectMany(uc => lCase, (uc, lc) => (uc + lc)).ToList().ForEach(Console.WriteLine);
+        }
+        //Sum of MultDimentional array.
+        static void SumTwoDimentionalArray()
+        {
+            var arry = new[,]
+            {
+                {1,2 },
+                {3,4 }
+            };
+
+            var result = (from int val in arry select val).Sum();
+            Console.WriteLine("Sum of Multidimentional array:= {0}", result);
+        }
+        //Join two string arrays with distinct values
+        static void TwoStringArraysWithDistinct()
+        {
+            string[] first = { "One", "Two" };
+            string[] two = { "Three", "One" };
+            first.Union(two).ToList().ForEach(Console.WriteLine);
         }
     }
 }
