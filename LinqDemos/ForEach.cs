@@ -16,11 +16,13 @@ namespace LinqDemos
 
             arr.ToList().ForEach(x => { x = (x + 1); });//List not updated
             arr.ToList().ForEach(Console.WriteLine); //0 1 2 3 4 5
+
             Console.WriteLine("Array.ForEach with action delegate");
             Array.ForEach(arr, Console.WriteLine);//0 1 2 3 4 5
+
             Console.WriteLine("Array.ForEach with action delegate after updated");
-            Array.ForEach(arr, x => { x = x * 10; Console.WriteLine(x); });//Array updated
-            //Array.ForEach(arr, Console.WriteLine);//0 10 20 30 40 50
+            Array.ForEach(arr, x => { x = x * 10; Console.WriteLine(x); });//0 10 20 30 40 50
+            
             arr.All(x => { x = x + 10; return true; });//array not updated
             arr.ToList().ForEach(Console.WriteLine); //0 1 2 3 4 5
 
@@ -37,6 +39,7 @@ namespace LinqDemos
             cls.ForEach(x => Console.WriteLine(x.Id));// 0 0 0 0
             cls.ForEach(x => x.Id = 10);//List updated
             cls.ForEach(x => Console.WriteLine(x.Id));// 10 10 10 10
+
             cls.All(x => { x.Id = 100; return true; });//List updated
             cls.ForEach(x => Console.WriteLine(x.Id));// 100 100 100 100
 
