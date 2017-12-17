@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>LinqDemos.Generics</StartupObject>
+    <StartupObject>LinqDemos.MyDictionary</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyDictionary.cs" />
     <Compile Include="ForEach.cs" />
     <Compile Include="Generics.cs" />
     <Compile Include="Program.cs" />
