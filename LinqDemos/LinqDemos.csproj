@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>LinqDemos.MyDictionary</StartupObject>
+    <StartupObject>LinqDemos.InnerJoin</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InnerJoin.cs" />
     <Compile Include="MyDictionary.cs" />
     <Compile Include="ForEach.cs" />
     <Compile Include="Generics.cs" />
