@@ -171,11 +171,10 @@ namespace LinqDemos
 
             //if exists remove the key
             age.Remove("ii");
-            //age.ToList().ForEach(e => e.Key.ToString().ToUpper());
+            Console.WriteLine("Dictionary with ForEach");
+            age.ToList().ForEach(e => e.Key.ToString().ToUpper());
             foreach (var item in age.Keys)
-            {
                 Console.WriteLine(item.ToString());
-            }
             //Remove all keys and values from dictionary.
             age.Clear();
         }

@@ -9,8 +9,10 @@ namespace LinqDemos
         static void Main(string[] args)
         {
             int[] arr = new int[] { 0, 1, 2, 3, 4, 5 };
+
             Console.WriteLine("ForEach with action delegate");
             arr.ToList().ForEach(Console.WriteLine);//0 1 2 3 4 5
+
             Console.WriteLine("ForEach with anonymous method");
             arr.ToList().ForEach(x => { Console.WriteLine(x); });//0 1 2 3 4 5
 
@@ -28,6 +30,7 @@ namespace LinqDemos
 
             arr.Select(x => { x = x + 1; return x; }).ToList().ForEach(Console.WriteLine);//1 2 3 4 5 6
 
+            Console.WriteLine("------List with ForEach() ------");
             List<int> list = new List<int> { 0, 1, 2, 3, 4, 5 };
             list.ForEach(x => { x = (x + 1); });//List not updated
             list.ForEach(Console.WriteLine);//0 1 2 3 4 5
