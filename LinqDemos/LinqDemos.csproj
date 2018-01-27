@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>LinqDemos.Let</StartupObject>
+    <StartupObject>LinqDemos.GroupBy.GroupByExample</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,16 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GroupBy\GroupByExample.cs" />
     <Compile Include="InnerJoin.cs" />
     <Compile Include="Let.cs" />
     <Compile Include="MyDictionary.cs" />
     <Compile Include="ForEach.cs" />
     <Compile Include="Generics.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projection Operators\SelectExamples.cs" />
+    <Compile Include="Projection Operators\SelectManyExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
